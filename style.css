@@ -1,119 +1,199 @@
-body {
-  padding: 1em;
-  background-color: #212026;
-}
+<style>
+  /* Base Body Style */
+  body {
+    margin: 0;
+    padding: 1em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(to bottom, #000066, #000033); /* Smooth gradient: top to bottom */
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
 
-nav {
-  display:flex;
-  justify-content: flex-end;
-  gap: 1.5em;
-}
+  /* Headings */
+  h1 {
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    text-align: center;
+    background: -webkit-linear-gradient(45deg, #4774ea, #00fffb 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Roboto, Arial, sans-serif;
+  }
 
-a {
-  color: aqua;
-  font-family: Roboto, Arial, sans-serif;
-}
+  h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
 
-/*Use gradient text effect*/
-h1 {
-  color: white;
-  text-align: center;
-  font-size: 3em;
-  font-family: Roboto, Arial, sans-serif;
-  background: -webkit-linear-gradient(45deg, #4774ea, #00fffb 80%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  /* Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    margin: 20px 0;
+  }
 
-a.fake-button {
-  margin: auto;
-  margin-top: 2.5em;
-  display: block;
-  width: 115px;
-  padding: 10px;
-  text-align: center;
-  line-height: 25px;
-}
+  nav a {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s;
+    background: linear-gradient(to bottom, #000044, #000077); /* Gradient button style */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
 
-p {
-  color: white;
-  max-width: 60em;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: Roboto, Arial, sans-serif;
-}
+  nav a:hover {
+    background: linear-gradient(to bottom, #000033, #000055); /* Darker hover effect */
+    transform: translateY(-5px); /* Slide upward on hover */
+  }
 
-/* CSS from https://getcssscan.com/css-buttons-examples*/
-.button-29 {
-  align-items: center;
-  appearance: none;
-  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
-  border: 0;
-  border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 18px;
-}
-
-.button-29:focus {
-  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-}
-
-.button-29:hover {
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-  transform: translateY(-2px);
-}
-
-.button-29:active {
-  box-shadow: #3c4fe0 0 3px 7px inset;
-  transform: translateY(2px);
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #555555;
-  padding: 10px;
-  border-radius: 5px;
-  right: 0;
-  flex-direction: column;
-  gap: 10px;
-  border: 1px solid white;
-}
-
-.thin-dropdown {
-  display: none;
-  position: relative;
-}
-
-@media screen and (max-width: 550px) {
-  .thin-dropdown {
+  a.fake-button {
+    margin: auto;
+    margin-top: 2.5em;
     display: block;
+    width: 115px;
+    padding: 10px;
+    text-align: center;
+    line-height: 25px;
   }
 
-  .wide-only {
-    display:none;
+  /* Button Styles */
+  .button-29 {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    white-space: nowrap;
+    font-size: 18px;
   }
-}
 
-.thin-dropdown:hover .dropdown-content {
-  display: flex;
-}
+  .button-29:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  }
+
+  .button-29:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+
+  .button-29:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+  /* Text Container */
+  .text-container {
+    max-width: 600px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    text-align: left;
+    background: #000044; /* Solid dark blue tone */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  }
+
+  .custom-text {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .custom-text p {
+    margin: 0 0 10px 0;
+  }
+
+  /* Dropdown Menu */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #555555;
+    padding: 10px;
+    border-radius: 5px;
+    right: 0;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid white;
+  }
+
+  .thin-dropdown {
+    display: none;
+    position: relative;
+  }
+
+  .thin-dropdown:hover .dropdown-content {
+    display: flex;
+  }
+
+  @media screen and (max-width: 550px) {
+    .thin-dropdown {
+      display: block;
+    }
+
+    .wide-only {
+      display: none;
+    }
+  }
+
+  /* Stars CSS */
+  .stars {
+    color: white;
+    font-size: 3em; /* Adjust this value to change the size of the stars */
+  }
+
+  /* Media Query for Mobile Responsiveness */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 4em;
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+
+    nav {
+      flex-direction: column; /* Stacks items vertically for smaller screens */
+      gap: 15px;
+    }
+
+    nav a {
+      font-size: 1em;
+      padding: 10px 15px;
+    }
+
+    .text-container {
+      padding: 15px;
+    }
+  }
+</style>
