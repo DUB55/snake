@@ -14,3 +14,8 @@
   
 <p align="left">📚 Yes, this website was made by DUB5's insane coding skills <br>
 
+###
+###
+###
+<p align="left">😎😒 Yes, I let my slaves do the work, I have only made this website
+
