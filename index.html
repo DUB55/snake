@@ -31,11 +31,10 @@
     }
 
     /* Headings */
-    h1 {
-      font-size: 5em;
+    h1, h2 {
       font-weight: bold;
       margin-bottom: 10px;
-      margin-top: 50px;
+      margin-top: 20px;
       text-align: center;
       background: -webkit-linear-gradient(45deg, #4774ea, #00fffb 80%);
       -webkit-background-clip: text;
@@ -43,68 +42,23 @@
       font-family: Roboto, Arial, sans-serif;
     }
 
-    /* Navigation Bar */
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1.5em;
-      margin: 20px 0;
+    h1 {
+      font-size: 5em;
+      margin-top: 50px;
     }
 
-    nav a {
+    h2 {
+      font-size: 2.5em;
+    }
+
+    /* Paragraphs */
+    p {
+      margin: 10px 0;
       font-size: 1.2em;
-      font-weight: bold;
-      color: white;
-      text-decoration: none; /* No underline */
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      transition: background 0.3s, transform 0.3s;
-      background: linear-gradient(to bottom, #000044, #000077); /* Gradient button style */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      -webkit-background-clip: text; /* Ensure the text remains visible */
     }
 
-    nav a:hover {
-      background: linear-gradient(to bottom, #000033, #000055); /* Darker hover effect */
-      transform: translateY(-5px); /* Slide upward on hover */
-      color: white; /* Ensure text is visible on hover */
-    }
-
-    /* Button Styles */
-    .button-29 {
-      align-items: center;
-      appearance: none;
-      background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
-      border: 0;
-      border-radius: 6px;
-      box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
-      box-sizing: border-box;
-      color: #fff;
-      cursor: pointer;
-      height: 40px; /* Adjusted height to be more visible */
-      padding: 10px 20px; /* Increased padding for better readability */
+    p.center {
       text-align: center;
-      font-size: 18px;
-      transition: box-shadow .15s, transform .15s;
-      user-select: none;
-      white-space: nowrap;
-      text-decoration: none; /* Remove underline from the button */
-    }
-
-    .button-29:focus {
-      box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-    }
-
-    .button-29:hover {
-      box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-      transform: translateY(-2px);
-    }
-
-    .button-29:active {
-      box-shadow: #3c4fe0 0 3px 7px inset;
-      transform: translateY(2px);
     }
 
     /* Text Container */
@@ -125,26 +79,45 @@
       margin: 0;
     }
 
-    /* Stars CSS */
-    .stars {
-      color: white;
-      font-size: 3em; /* Adjust this value to change the size of the stars */
+    /* Button Styles */
+    .button-29 {
+      align-items: center;
+      appearance: none;
+      background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+      border: 0;
+      border-radius: 6px;
+      box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      height: 40px;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 18px;
+      transition: box-shadow .15s, transform .15s;
+      user-select: none;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .button-29:focus {
+      box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    }
+
+    .button-29:hover {
+      box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+      transform: translateY(-2px);
+    }
+
+    .button-29:active {
+      box-shadow: #3c4fe0 0 3px 7px inset;
+      transform: translateY(2px);
     }
 
     /* Media Query for Mobile Responsiveness */
     @media (max-width: 768px) {
       h1 {
         font-size: 4em;
-      }
-
-      nav {
-        flex-direction: column; /* Stacks items vertically for smaller screens */
-        gap: 15px;
-      }
-
-      nav a {
-        font-size: 1em;
-        padding: 10px 15px;
       }
 
       .text-container {
@@ -157,6 +130,16 @@
 
   <h1>DUB5'S SNAKE GAME</h1>
 
+  <!-- README Content -->
+  <div class="text-container">
+    <h2>Hey 👋 What's up?</h2>
+    <p class="center">I'M DUB5</p>
+    <h2>About me</h2>
+    <p>✨ Creating hacks since last year</p>
+    <p>📚 Yes, this website was made by DUB5's insane coding skills</p>
+    <p>😎😒 Yes, I let my slaves do the work, I have only made this website.</p>
+  </div>
+
   <!-- Button for Playing Snake Game -->
   <a class="button-29 fake-button" href="v/current/">Spelen</a>
 
@@ -164,4 +147,3 @@
 
 </body>
 </html>
-
