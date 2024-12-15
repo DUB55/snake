@@ -1,6 +1,4 @@
-# Javascript to edit the color of the menu:
-
-// Function to apply gradient
+# Javascript to edit the color of the menu (to a color gradient):
 
 function applyGradient(selector, gradient) {
   const element = document.querySelector(selector);
@@ -13,5 +11,7 @@ function applyGradient(selector, gradient) {
 }
 
 applyGradient('#mod-selector-dialogue', 'linear-gradient(to top, #000033, #00008B)');
+
+
 
 // the id = #mod-selector-dialogue
