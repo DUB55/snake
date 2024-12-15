@@ -1,3 +1,7 @@
+## Template:
+document.querySelector('your-selector-here').style.display = 'none';
+
+(get selector by: selecting element by inspecting, right click --> select, copy - selector
 ## Discord:
 document.querySelector('#mod-loader-title > span:nth-child(1) > a > img').style.display = 'none';
 
