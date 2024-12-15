@@ -1,5 +1,15 @@
 # Here are all notes:
 
+## Templates:
+
+### To hide a element:
+        document.querySelector('your-selector-here').style.display = 'none';
+### To make text white:
+        const changeTextColorToWhite = selector => { const element = document.querySelector(selector); if (element) element.style.color = 'white'; }; changeTextColorToWhite('selector-here');
+### To edit a color of a element:
+        const changeTextColor = (selector, color) => { const element = document.querySelector(selector); if (element) element.style.color = color; };
+        changeTextColor('your-selector-here', '#ff0000');
+
 ## Javascript to make text white:
         
         function changeTextColorToWhite(selector) {
