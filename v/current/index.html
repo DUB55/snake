@@ -27,11 +27,11 @@
           
           // If the element is entirely below the yPoint, hide it
           if (rect.top >= yPoint) {
-            element.style.visibility = 'hidden';
+            element.style.visibility = 'hidden !important';
           }
           // If the element is partially below the yPoint, clip it
           else if (rect.bottom > yPoint) {
-            element.style.clipPath = `inset(0 0 ${rect.bottom - yPoint}px 0)`;
+            element.style.clipPath = `inset(0 0 ${rect.bottom - yPoint}px 0) !important`;
           }
         }
         
