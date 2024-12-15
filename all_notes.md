@@ -9,7 +9,7 @@
         }
         }
 
-    	changeTextColorToWhite('.your-text-selector');
+    	changeTextColorToWhite('#mod-descriptions > div:nth-child(1) > span:nth-child(1)');
 
 
 ## Javascript to edit the color of the menu (to a color gradient):
@@ -27,7 +27,8 @@
 
     applyGradient('#mod-selector-dialogue', 'linear-gradient(to top, #000033, #00008B)');
 
-    ## Template:
+
+## Template:
 document.querySelector('your-selector-here').style.display = 'none';
 
 (get selector by: selecting element by inspecting, right click --> select, copy - selector
