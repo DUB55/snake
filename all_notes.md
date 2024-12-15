@@ -9,7 +9,7 @@
         }
         }
 
-    	changeTextColorToWhite('#mod-descriptions > div:nth-child(1) > span:nth-child(1)');
+    	changeTextColorToWhite('selector-here');
 
 
 ## Javascript to edit the color of the menu (to a color gradient):
