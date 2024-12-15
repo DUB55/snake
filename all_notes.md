@@ -1,5 +1,17 @@
 # Here are all notes:
 
+## Javascript to make text white:
+        
+        function changeTextColorToWhite(selector) {
+        const element = document.querySelector(selector);
+        if (element) {
+        element.style.color = 'white';
+        }
+        }
+
+    	changeTextColorToWhite('.your-text-selector');
+
+
 ## Javascript to edit the color of the menu (to a color gradient):
 
     function applyGradient(selector, gradient) {
