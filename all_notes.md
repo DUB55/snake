@@ -4,9 +4,7 @@
 
 ### To hide a element:
         document.querySelector('SELECTOR').style.display = 'none';
-### To make text white:
-        const changeTextColorToWhite = selector => { const element = document.querySelector(selector); if (element) element.style.color = 'white'; }; changeTextColorToWhite('SELECTOR');
-### To edit a color of a element:
+### To edit color of a element:
         const changeTextColor = (selector, color) => { const element = document.querySelector(selector); if (element) element.style.color = color; };
         changeTextColor('SELECTOR', 'COLOR');
 ### To edit text of a element:
