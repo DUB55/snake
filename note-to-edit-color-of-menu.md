@@ -1,5 +1,7 @@
 # Javascript to edit the color of the menu:
+
 // Function to apply gradient
+
 function applyGradient(selector, gradient) {
   const element = document.querySelector(selector);
   if (element) {
