@@ -66,7 +66,7 @@
         const element = document.querySelector(selector);
         if (element) {
             element.style.background = gradient;
-            console.log(`Gradient applied to ${selector}`);
+            console.log(`nigga wrm open je console:: ${selector}`);
         } else {
             console.log(`Element with selector ${selector} not found`);
         }
