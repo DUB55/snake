@@ -2,7 +2,7 @@
 (function () {
     const titleElement = document.querySelector('#mod-loader-title > h1');
     if (titleElement) {
-        titleElement.style.color = '#0909ab';
+        titleElement.style.color = '#ff0000';
         titleElement.innerHTML = '<strong>SNAKE HACKS</strong>';
     }
 })();
@@ -74,3 +74,17 @@
 
     applyGradient('#mod-selector-dialogue', 'linear-gradient(to top, #000033, #00008B)');
 })();
+
+// Function to style elements (change color and font weight)
+function styleElement(selector) {
+    const element = document.querySelector(selector);
+    if (element) {
+        element.style.color = 'white';
+        element.style.fontWeight = 'bold';
+    }
+}
+
+// Apply styles to 11 selectors
+for (let i = 1; i <= 11; i++) {
+    styleElement(`#mod-options > label:nth-child(${i})`);
+}
