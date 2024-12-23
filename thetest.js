@@ -109,8 +109,17 @@
             styleElement(`#mod-options > label:nth-child(${i})`);
         }
 
+        // Change the text content of the first label
+        (function () {
+            const firstLabel = document.querySelector('#mod-options > label:nth-child(1)');
+            if (firstLabel) {
+                firstLabel.textContent = 'Hack 1';
+                console.log('Changed text of the first label to "Hack 1".');
+            } else {
+                console.log('Failed to find the first label.');
+            }
+        })();
+
         console.log('Script executed successfully.');
     };
-
 })();
-// 333THE END OF THE SCRIPT!!!
