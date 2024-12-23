@@ -132,3 +132,4 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(document.body, { childList: true, subtree: true });
     }
 });
+// end of the script ...
