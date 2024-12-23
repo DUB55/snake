@@ -1,5 +1,4 @@
 (function () {
-    // Function to hide elements and log success or failure
     const hideElements = (selectors) => {
         selectors.forEach(selector => {
             const element = document.querySelector(selector);
@@ -12,21 +11,18 @@
         });
     };
 
-    // Wait for the DOM to be fully loaded before running the script
     window.onload = function () {
         console.log('All resources loaded. Script execution begins.');
 
-        // Change the color of the title and modify its content
         (function () {
             const titleElement = document.querySelector('#mod-loader-title > h1');
             if (titleElement) {
-                titleElement.style.color = '#ff0000';
+                titleElement.style.color = '#0004ff';
                 titleElement.innerHTML = '<strong>SNAKE HACKS</strong>';
                 console.log('Modified title color and content.');
             }
         })();
 
-        // Hide specific images
         (function () {
             const imgSelectors = [
                 '#mod-loader-title > span:nth-child(1) > a > img',
@@ -43,7 +39,6 @@
             });
         })();
 
-        // Hide elements based on the provided selectors
         (function () {
             const selectorsToHide = [
                 '#mod-descriptions > div:nth-child(10) > span:nth-child(5)',
@@ -73,13 +68,11 @@
                 '#advanced-options-toggle'
             ];
 
-            // Include the problematic selector explicitly with an improved check
             selectorsToHide.push('#mod-descriptions > div:nth-child(2) > span:nth-child(3)'); 
 
             hideElements(selectorsToHide);
         })();
 
-        // Apply gradient to a specific element
         (function () {
             function applyGradient(selector, gradient) {
                 const element = document.querySelector(selector);
@@ -92,25 +85,46 @@
             }
 
             applyGradient('#mod-selector-dialogue', 'linear-gradient(to top, #000033, #00008B)');
+            applyGradient('#mod-indicator', 'linear-gradient(to top, rgb(0, 0, 51), rgb(0, 0, 139))');
         })();
 
-        // Function to style elements (change color and font weight)
-        function styleElement(selector) {
+        function styleElement(selector, color, fontWeight) {
             const element = document.querySelector(selector);
             if (element) {
-                element.style.color = 'white';
-                element.style.fontWeight = 'bold';
+                element.style.color = color;
+                element.style.fontWeight = fontWeight;
                 console.log(`Styled element: ${selector}`);
             }
         }
 
-        // Apply styles to 11 selectors
-        for (let i = 1; i <= 11; i++) {
-            styleElement(`#mod-options > label:nth-child(${i})`);
+        for (let i = 1; i <= 10; i++) {
+            styleElement(`#mod-descriptions > div:nth-child(${i}) > span:nth-child(1)`, 'white', 'bold');
+        }
+
+        const textSelectors = [
+            { selector: '#mod-options > label:nth-child(11)', text: 'Geen Hacks' },
+            { selector: '#close-mod-selector', text: 'Sluiten' },
+            { selector: '#apply-mod', text: 'Spelen' },
+            { selector: '#change-mod-button', text: 'Alle Hacks' },
+            { selector: '#mod-indicator > span:nth-child(1)', text: 'Hack:    ' }
+        ];
+
+        textSelectors.forEach(({ selector, text }) => {
+            const element = document.querySelector(selector);
+            if (element) {
+                element.innerHTML = text;
+                console.log(`Modified text of element: ${selector}`);
+            } else {
+                console.log(`Failed to find element for text modification: ${selector}`);
+            }
+        });
+
+        const titleElement = document.querySelector('#mod-loader-title');
+        if (titleElement) {
+            titleElement.style.color = 'transparent';
+            console.log('Modified title color to transparent.');
         }
 
         console.log('Script executed successfully.');
     };
-
 })();
-// THE END OF THE SCRIPT!!!
