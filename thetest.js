@@ -109,11 +109,13 @@
             styleElement(`#mod-options > label:nth-child(${i})`);
         }
 
-        // Change the text content of the first label
+        // Change only the text content of the first label (preserve checkbox)
         (function () {
             const firstLabel = document.querySelector('#mod-options > label:nth-child(1)');
             if (firstLabel) {
-                firstLabel.textContent = 'Hack 1';
+                // Only change the text part of the label, preserving the checkbox
+                const labelText = firstLabel.textContent || firstLabel.innerText;
+                firstLabel.innerHTML = firstLabel.innerHTML.replace(labelText, 'Hack 1');
                 console.log('Changed text of the first label to "Hack 1".');
             } else {
                 console.log('Failed to find the first label.');
