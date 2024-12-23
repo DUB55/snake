@@ -1,6 +1,6 @@
 // Wait for the DOM to be fully loaded before running the script
-window.onload = function () {
-    console.log('All resources loaded. Script execution begins.');
+document.addEventListener("DOMContentLoaded", function () {
+    console.log('DOM fully loaded. Script execution begins.');
 
     // Function to hide elements based on the provided selectors
     function hideElements(selectors) {
@@ -97,7 +97,7 @@ window.onload = function () {
             // Apply hiding logic after a short delay to ensure elements are loaded
             setTimeout(() => {
                 hideElements(selectorsToHide);
-            }, 500); // Adjust time if necessary based on page load speed
+            }, 1000); // Increased delay to give time for elements to load
 
             // Apply gradient to specific element
             applyGradient('#mod-selector-dialogue', 'linear-gradient(to top, #000033, #00008B)');
@@ -131,4 +131,4 @@ window.onload = function () {
         // Observe the body for changes (child elements added to the DOM)
         observer.observe(document.body, { childList: true, subtree: true });
     }
-};
+});
