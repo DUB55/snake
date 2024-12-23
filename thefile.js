@@ -2,7 +2,7 @@
 (function () {
     const titleElement = document.querySelector('#mod-loader-title > h1');
     if (titleElement) {
-        titleElement.style.color = '#ff0000';
+        titleElement.style.color = '#0004ff';
         titleElement.innerHTML = '<strong>SNAKE HACKS</strong>';
     }
 })();
