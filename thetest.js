@@ -8,8 +8,9 @@ window.onload = function () {
             const element = document.querySelector(selector);
             if (element) {
                 element.style.display = 'none';
+                console.log(`Successfully hid element: ${selector}`); // Log success
             } else {
-                console.log(`Element with selector ${selector} not found`);
+                console.log(`Failed to find element: ${selector}`); // Log failure
             }
         });
     }
@@ -21,7 +22,7 @@ window.onload = function () {
             element.style.background = gradient;
             console.log(`Applied gradient to: ${selector}`);
         } else {
-            console.log(`Element with selector ${selector} not found`);
+            console.log(`Element with selector ${selector} not found for gradient`);
         }
     }
 
@@ -31,6 +32,9 @@ window.onload = function () {
         if (element) {
             element.style.color = 'white';
             element.style.fontWeight = 'bold';
+            console.log(`Styled element: ${selector}`);
+        } else {
+            console.log(`Failed to style element: ${selector}`);
         }
     }
 
@@ -46,6 +50,9 @@ window.onload = function () {
                 if (titleElement) {
                     titleElement.style.color = '#ff0000';
                     titleElement.innerHTML = '<strong>SNAKE HACKS</strong>';
+                    console.log('Modified title color and content.');
+                } else {
+                    console.log('Failed to find the title element.');
                 }
             })();
 
@@ -59,6 +66,9 @@ window.onload = function () {
                     const imgElement = document.querySelector(selector);
                     if (imgElement) {
                         imgElement.style.display = 'none';
+                        console.log(`Successfully hid image: ${selector}`);
+                    } else {
+                        console.log(`Failed to find image: ${selector}`);
                     }
                 });
             })();
