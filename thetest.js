@@ -73,6 +73,9 @@
                 '#advanced-options-toggle'
             ];
 
+            // Include the problematic selector explicitly with an improved check
+            selectorsToHide.push('#mod-descriptions > div:nth-child(2) > span:nth-child(3)'); 
+
             hideElements(selectorsToHide);
         })();
 
