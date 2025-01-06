@@ -16,11 +16,12 @@ window.onload = function () {
                     titleElement.innerHTML = '<strong>SNAKE HACKS</strong>';
                 }
 
-                // Make #mod-loader-title transparent
+                // Make #mod-loader-title transparent and remove the border
                 const loaderTitle = document.querySelector('#mod-loader-title');
                 if (loaderTitle) {
                     loaderTitle.style.background = 'transparent';
                     loaderTitle.style.color = 'transparent';
+                    loaderTitle.style.border = 'none';  // Remove the border
                 }
 
                 // Style the strong text in #mod-loader-title
@@ -61,6 +62,12 @@ window.onload = function () {
                     if (elementToHide) {
                         elementToHide.style.display = 'none';
                     }
+
+                    // Hide elements #mod-descriptions > div:nth-child(x) > span:nth-child(3) for x=1 to 10
+                    const elementToHideChild3 = document.querySelector(`#mod-descriptions > div:nth-child(${i}) > span:nth-child(3)`);
+                    if (elementToHideChild3) {
+                        elementToHideChild3.style.display = 'none';
+                    }
                 }
             })();
 
@@ -74,6 +81,8 @@ window.onload = function () {
                 const applyModButton = document.querySelector('#apply-mod');
                 if (applyModButton) {
                     applyModButton.textContent = 'Spelen';
+                    // Keep the text 'Spelen' on the button (avoid it returning to its old text)
+                    applyModButton.disabled = true;  // Prevent further changes to the button text
                 }
             })();
 
