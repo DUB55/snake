@@ -15,79 +15,71 @@ window.onload = function () {
                     titleElement.style.color = '#ff0000';
                     titleElement.innerHTML = '<strong>SNAKE HACKS</strong>';
                 }
-            })();
 
-            // Hide specific images
-            (function () {
-                const imgSelectors = [
-                    '#mod-loader-title > span:nth-child(1) > a > img',
-                    '#mod-loader-title > span:nth-child(3) > a > img'
-                ];
-                imgSelectors.forEach(selector => {
-                    const imgElement = document.querySelector(selector);
-                    if (imgElement) {
-                        imgElement.style.display = 'none';
-                    }
-                });
-            })();
-
-            // Hide elements based on the provided selectors
-            (function () {
-                const selectorsToHide = [
-                    '#mod-descriptions > div:nth-child(10) > span:nth-child(5)',
-                    '#mod-descriptions > div:nth-child(9) > span:nth-child(5)',
-                    '#mod-descriptions > div:nth-child(8) > span:nth-child(5)',
-                    '#mod-descriptions > div:nth-child(7) > span:nth-child(5)',
-                    '#mod-descriptions > div:nth-child(6) > span:nth-child(5)',
-                    '#mod-descriptions > div:nth-child(5) > span:nth-child(5)',
-                    '#mod-descriptions > div:nth-child(4) > span:nth-child(5)',
-                    '#mod-descriptions > div:nth-child(3) > span:nth-child(5)',
-                    '#mod-descriptions > div:nth-child(2) > span:nth-child(5)',
-                    '#mod-descriptions > div:nth-child(1) > span:nth-child(5)',
-                    '#mod-game-verson-div > label',
-                    '#mod-game-version',
-                    '#mod-game-verson-div > a',
-                    '#version-info',
-                    '#advanced-options-show-settings-text',
-                    '#advanced-options-toggle'
-                ];
-
-                selectorsToHide.forEach(selector => {
-                    const element = document.querySelector(selector);
-                    if (element) {
-                        element.style.display = 'none';
-                    }
-                });
-            })();
-
-            // Apply gradient to a specific element
-            (function () {
-                function applyGradient(selector, gradient) {
-                    const element = document.querySelector(selector);
-                    if (element) {
-                        element.style.background = gradient;
-                        console.log(`Applied gradient to: ${selector}`);
-                    } else {
-                        console.log(`Element with selector ${selector} not found`);
-                    }
+                // Make #mod-loader-title transparent
+                const loaderTitle = document.querySelector('#mod-loader-title');
+                if (loaderTitle) {
+                    loaderTitle.style.background = 'transparent';
+                    loaderTitle.style.color = 'transparent';
                 }
 
-                applyGradient('#mod-selector-dialogue', 'linear-gradient(to top, #000033, #00008B)');
+                // Style the strong text in #mod-loader-title
+                const titleStrong = document.querySelector('#mod-loader-title > h1 > strong');
+                if (titleStrong) {
+                    titleStrong.style.color = '#ffffff';
+                    titleStrong.style.fontFamily = 'Arial Black, sans-serif';
+                    titleStrong.style.fontWeight = 'bold';
+                }
             })();
 
-            // Function to style elements (change color and font weight)
-            function styleElement(selector) {
-                const element = document.querySelector(selector);
-                if (element) {
-                    element.style.color = 'white';
-                    element.style.fontWeight = 'bold';
+            // Apply modifications to #mod-indicator and its child
+            (function () {
+                const modIndicator = document.querySelector('#mod-indicator');
+                if (modIndicator) {
+                    modIndicator.style.color = 'darkblue';
                 }
-            }
 
-            // Apply styles to 11 selectors
-            for (let i = 1; i <= 11; i++) {
-                styleElement(`#mod-options > label:nth-child(${i})`);
-            }
+                const modIndicatorText = document.querySelector('#mod-indicator > span:nth-child(1)');
+                if (modIndicatorText) {
+                    modIndicatorText.style.color = 'white';
+                    modIndicatorText.style.fontWeight = 'bold';
+                    modIndicatorText.textContent = 'Hacks: ';
+                }
+            })();
+
+            // Style text for #mod-descriptions child elements (1-10)
+            (function () {
+                for (let i = 1; i <= 10; i++) {
+                    const textElement = document.querySelector(`#mod-descriptions > div:nth-child(${i}) > span:nth-child(1)`);
+                    if (textElement) {
+                        textElement.style.color = 'white';
+                        textElement.style.fontWeight = 'bold';
+                    }
+                }
+            })();
+
+            // Hide elements #mod-descriptions > div:nth-child(x) > span:nth-child(3) for x=1 to 10
+            (function () {
+                for (let i = 1; i <= 10; i++) {
+                    const elementToHide = document.querySelector(`#mod-descriptions > div:nth-child(${i}) > span:nth-child(3)`);
+                    if (elementToHide) {
+                        elementToHide.style.display = 'none';
+                    }
+                }
+            })();
+
+            // Change the text of specific selectors
+            (function () {
+                const closeModSelector = document.querySelector('#close-mod-selector');
+                if (closeModSelector) {
+                    closeModSelector.textContent = 'Terug';
+                }
+
+                const applyModButton = document.querySelector('#apply-mod');
+                if (applyModButton) {
+                    applyModButton.textContent = 'Spelen';
+                }
+            })();
 
             console.log('Script executed successfully.');
         });
